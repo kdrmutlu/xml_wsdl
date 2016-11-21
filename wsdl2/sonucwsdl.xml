@@ -1,0 +1,63 @@
+//Request
+<Envelope>
+<Body>
+    <Ahmet>
+        <isim>Ahmet</isim>
+        <yas>20</yas>
+        <bilgiler>
+            <string>aa</string>
+            <string>bb</string>
+            <string>cc</string>
+        </bilgiler>
+    </Ahmet>
+    <Kadir>
+        <DogrusalDizi>
+            <int>4</int>
+            <int>5</int>
+            <int>6</int>
+        </DogrusalDizi>
+        <arananEleman>6</arananEleman>
+    </Kadir>
+    <Sefabim>
+        <metin>metin</metin>
+    </Sefabim>
+    <Nurii>
+        <nuriler>
+            <Nuri>
+                <okulAdi>HFTTF</okulAdi>
+                <bolumAdi>YM<bolumAdi>
+                <girisTarihi>2013<girisTarihi>
+            </Nuri>
+            <Nuri>
+                <okulAdi>HFTTF</okulAdi>
+                <bolumAdi>MM<bolumAdi>
+                <girisTarihi>2015<girisTarihi>
+            </Nuri>
+        </nuriler>
+    </Nurii>
+</Body>
+</Envelope>
+
+//Response
+<Envelope>
+<Body>
+    <AhmetResponse>
+        <AhmetResult>Ahmet</AhmetResult>
+    </AhmetResponse>
+    <KadirResponse>
+        <KadirResult>6</KadirResult>
+    </KadirResponse>
+    <SefabimResponse>
+        <SefabimResult>ok</SefabimResult>
+    </SefabimResponse>
+    <NuriiResponse>
+        <NuriiResult>
+            <Nuri>
+                <okulAdi>HFTTF</okulAdi>
+                <bolumAdi>MM<bolumAdi>
+                <girisTarihi>2015<girisTarihi>
+            </Nuri>
+        </NuriiResult>
+    </NuriiResponse>
+</Body>
+</Envelope>

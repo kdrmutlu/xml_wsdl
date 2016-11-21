@@ -1,0 +1,23 @@
+//Request
+<Envelope>
+<Body>
+    <FahrenheitToCelsius>
+        <Fahrenheit>56</Fahrenheit>
+    </FahrenheitToCelsius>
+    <CelsiusToFahrenheit>
+        <Celsius>12</Celsius>
+    </CelsiusToFahrenheit>
+</Body>
+</Envelope>
+
+
+//Response
+<Envelope>
+<Body>
+    <CelsiusToFahrenheitResponse>
+        <FahrenheitToCelsiusResult>58</FahrenheitToCelsiusResult>
+    <CelsiusToFahrenheitResponse>
+        <CelsiusToFahrenheitResult>23</CelsiusToFahrenheitResult>
+    </CelsiusToFahrenheitResponse>
+</Body>
+</Envelope>

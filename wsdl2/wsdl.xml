@@ -1,0 +1,216 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://tempuri.org/">
+<wsdl:types>
+<s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+<s:element name="Ahmet">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="isim" type="s:string"/>
+<s:element minOccurs="1" maxOccurs="1" name="yas" type="s:int"/>
+<s:element minOccurs="0" maxOccurs="1" name="bilgiler" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:complexType name="ArrayOfString">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"/>
+</s:sequence>
+</s:complexType>
+<s:element name="AhmetResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="AhmetResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Kadir">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="DogrusalDizi" type="tns:ArrayOfInt"/>
+<s:element minOccurs="1" maxOccurs="1" name="arananEleman" type="s:int"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:complexType name="ArrayOfInt">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int"/>
+</s:sequence>
+</s:complexType>
+<s:element name="KadirResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="1" maxOccurs="1" name="KadirResult" type="s:int"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Sefabim">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="metin" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SefabimResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SefabimResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Nurii">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="nuriler" type="tns:ArrayOfNuri"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:complexType name="ArrayOfNuri">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="unbounded" name="Nuri" nillable="true" type="tns:Nuri"/>
+</s:sequence>
+</s:complexType>
+<s:complexType name="Nuri">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="okulAdi" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="bolumAdi" type="s:string"/>
+<s:element minOccurs="1" maxOccurs="1" name="girisTarihi" type="s:int"/>
+</s:sequence>
+</s:complexType>
+<s:element name="NuriiResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="NuriiResult" type="tns:ArrayOfNuri"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:schema>
+</wsdl:types>
+<wsdl:message name="AhmetSoapIn">
+<wsdl:part name="parameters" element="tns:Ahmet"/>
+</wsdl:message>
+<wsdl:message name="AhmetSoapOut">
+<wsdl:part name="parameters" element="tns:AhmetResponse"/>
+</wsdl:message>
+<wsdl:message name="KadirSoapIn">
+<wsdl:part name="parameters" element="tns:Kadir"/>
+</wsdl:message>
+<wsdl:message name="KadirSoapOut">
+<wsdl:part name="parameters" element="tns:KadirResponse"/>
+</wsdl:message>
+<wsdl:message name="SefabimSoapIn">
+<wsdl:part name="parameters" element="tns:Sefabim"/>
+</wsdl:message>
+<wsdl:message name="SefabimSoapOut">
+<wsdl:part name="parameters" element="tns:SefabimResponse"/>
+</wsdl:message>
+<wsdl:message name="NuriiSoapIn">
+<wsdl:part name="parameters" element="tns:Nurii"/>
+</wsdl:message>
+<wsdl:message name="NuriiSoapOut">
+<wsdl:part name="parameters" element="tns:NuriiResponse"/>
+</wsdl:message>
+<wsdl:portType name="Service1Soap">
+<wsdl:operation name="Ahmet">
+<wsdl:input message="tns:AhmetSoapIn"/>
+<wsdl:output message="tns:AhmetSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="Kadir">
+<wsdl:input message="tns:KadirSoapIn"/>
+<wsdl:output message="tns:KadirSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="Sefabim">
+<wsdl:input message="tns:SefabimSoapIn"/>
+<wsdl:output message="tns:SefabimSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="Nurii">
+<wsdl:input message="tns:NuriiSoapIn"/>
+<wsdl:output message="tns:NuriiSoapOut"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="Ahmet">
+<soap:operation soapAction="http://tempuri.org/Ahmet" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Kadir">
+<soap:operation soapAction="http://tempuri.org/Kadir" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Sefabim">
+<soap:operation soapAction="http://tempuri.org/Sefabim" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Nurii">
+<soap:operation soapAction="http://tempuri.org/Nurii" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="Ahmet">
+<soap12:operation soapAction="http://tempuri.org/Ahmet" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Kadir">
+<soap12:operation soapAction="http://tempuri.org/Kadir" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Sefabim">
+<soap12:operation soapAction="http://tempuri.org/Sefabim" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Nurii">
+<soap12:operation soapAction="http://tempuri.org/Nurii" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="Service1">
+<wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+<soap:address location="http://localhost:36064/Service1.asmx"/>
+</wsdl:port>
+<wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+<soap12:address location="http://localhost:36064/Service1.asmx"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
