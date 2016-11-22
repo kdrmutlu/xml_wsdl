@@ -1,0 +1,37 @@
+Request
+<Envelope>
+<Body>
+    <CreateInvoice>
+        <customer>
+            <CustCode>as</CustCode>
+            <CustType>1</CustType>
+        </customer>
+        <invoice>
+            <InvoiceDate>2000</InvoiceDate>
+            <Items>
+                <InvoiceItem>
+                    <ItemCode>sd</ItemCode>
+                    <Quantity>1.5</Quantity>
+                </InvoiceItem>
+                <InvoiceItem>
+                    <ItemCode>sd</ItemCode>
+                    <Quantity>1.5</Quantity>
+                </InvoiceItem>
+            </Items>
+        </invoice>
+    </CreateInvoice>
+</Body>
+</Envelope>
+
+
+Response
+<Envelope>
+<Body>
+    <CreateInvoiceResponse>
+        <CreateInvoiceResult>
+            <Success>True</Success>
+            <ErrorMessage>Hata</ErrorMessage>
+        </CreateInvoiceResult>
+    </CreateInvoiceResponse>
+</Body>
+</Envelope>
